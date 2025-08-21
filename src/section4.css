@@ -1,0 +1,68 @@
+.sec4-buttons {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a4f3c2;
+  gap: 50px;
+}
+/* Lock body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+.donation-cont {
+  display: flex;
+  flex-direction: column; /* stack heading & button vertically */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* optional: center vertically if container has height */
+  text-align: center;
+  margin: 2rem 0; /* add some spacing */
+}
+
+.donation-cont h2 {
+  margin-bottom: 1rem; /* space between heading & button */
+}
+
+.donation {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #2563eb; /* blue */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.donation:hover {
+  background-color: #1d4ed8; /* darker blue */
+}
+
+.volunteer-cont {
+  display: flex;
+  flex-direction: column; /* stack heading & button vertically */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* optional: center vertically if container has height */
+  text-align: center;
+  margin: 2rem 0; /* add some spacing */
+}
+
+.volunteer-cont h2 {
+  margin-bottom: 1rem; /* space between heading & button */
+}
+
+.volunteer {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #2563eb; /* blue */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.volunteer:hover {
+  background-color: #1d4ed8; /* darker blue */
+}

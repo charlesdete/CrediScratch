@@ -1,0 +1,76 @@
+/* Fullscreen modal container */
+/* Fullscreen modal container */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  z-index: 1000;
+}
+
+/* Modal box */
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 85vh; /* a bit smaller than screen height */
+  overflow-y: auto; /* scroll inside if content overflows */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px; /* adds space from top */
+}
+
+/* Form labels and inputs */
+.modal-content label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Close button */
+.close-modal {
+  align-self: flex-end;
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Submit button */
+.btn-submit {
+  margin-top: 20px;
+  padding: 12px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: darkgreen;
+}

@@ -1,0 +1,60 @@
+.wrapper {
+  height: 50vh;
+  background-image: url(images/cracked.jpg);
+  background-size: cover; /* Make sure background fits */
+  background-position: center; /* Center background image */
+
+  display: flex;
+  flex-direction: column; /* Stack h5 and buttons vertically */
+  justify-content: center; /* Center vertically in the wrapper */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  padding: 20px; /* Instead of padding: auto (invalid) */
+}
+.heroH5 {
+  color: #fff;
+  font-size: xx-large;
+  font-weight: 900;
+  font-family: "Courier New", Courier, monospace;
+  align-items: center;
+  padding: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* Centers buttons horizontally */
+  gap: 10px; /* Space between buttons */
+}
+.Button1 {
+  padding: 20px;
+  background-color: rgb(239, 147, 27);
+  color: #fff;
+  font-size: large;
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 8px;
+  cursor: pointer;
+  border-color: #fff;
+}
+
+.Button2 {
+  padding: 20px;
+  background-color: #3d5afe;
+  color: #fff;
+  font-size: large;
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 8px;
+  cursor: pointer;
+  border-color: #fff;
+}
+.Button1:hover {
+  background-color: rgb(239, 147, 27);
+  border-color: rgb(202, 128, 101);
+  color: #fff;
+}
+.Button2:hover {
+  background-color: #3d5afe;
+  border-color: rgb(96, 96, 228);
+  color: #fff;
+}

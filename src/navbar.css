@@ -1,0 +1,47 @@
+.navbar {
+  height: 10vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push links to left, logo to right */
+  padding: 0 10px; /* Optional side spacing */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+img {
+  height: 60px;
+  width: 60px;
+  background-image: url(images/credilogo.png);
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  border-color: none;
+}
+.logo h1 {
+  font-size: small;
+  display: flex;
+}
+.links {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+ul {
+  display: flex;
+  gap: 30px; /* Space between nav items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li a {
+  text-decoration: none;
+}
+li a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(15, 60, 129);
+}
