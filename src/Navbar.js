@@ -1,33 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import CredImg from "./images/credilogo.png";
 
-function Navbar() {
+import { Link as RouterLink, useNavigate } from "react-router-dom"; // router link
+import Dropdown from "./dropdown";
+import Dropdown1 from "./dropdown1";
+
+function Navbar({ isLoggedIn }) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("user"); // clear saved user
+    navigate("/"); // redirect home
+  };
   return (
-    <>
-      <div className="navbar">
+    <div className="navbar">
+      <div className="navbar-contents">
         <div className="logo">
-          <img src={CredImg} alt="" />
-          <h1>Centre for Resource and Development Inclusion </h1>
+          <img src={CredImg} alt="CReDI logo" />
+          <h1>Centre for Resource and Development Inclusion</h1>
         </div>
+
         <div className="links">
           <ul>
+            {/* Home goes to actual route (React Router) */}
             <li>
-              <a href="">Home</a>
+              <RouterLink to="/">Home</RouterLink>
+              <Dropdown1 />
             </li>
+
+            {/* Organisation dropdown toggle */}
             <li>
-              <a href="">Our Programs</a>
+              <RouterLink to="/">Our Organisation</RouterLink>
+              <Dropdown />
             </li>
-            <li>
-              <a href="">Our Community</a>
-            </li>
-            <li>
-              <a href="">Contact</a>
-            </li>
+            {isLoggedIn && (
+              <li onClick={handleLogout}>
+                <RouterLink to="/">Logout</RouterLink>
+              </li>
+            )}
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

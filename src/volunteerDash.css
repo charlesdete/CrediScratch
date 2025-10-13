@@ -1,0 +1,102 @@
+.manage-container {
+  width: 100%;
+  background: #fff;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.manage-volunteer-header {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px;
+}
+.manage-volunteer-title {
+  padding: 10px;
+  font-weight: 800;
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+}
+.manage-volunteer-contents {
+  padding: 10px;
+  background: rgb(61, 127, 249);
+
+  display: flex; /* make children (cards) line up */
+  flex-direction: row; /* horizontal alignment */
+  flex-wrap: wrap; /* wrap to new line if needed */
+  gap: 15px; /* spacing between cards */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.volunteer-list {
+  padding: 10px;
+  background: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.volunteer-details {
+  display: flex; /* align items in a row */
+  flex-direction: row; /* horizontal layout */
+  align-items: center; /* align vertically center */
+  justify-content: space-between; /* spread them out */
+  gap: 10px; /* spacing between items */
+  width: 100%;
+  cursor: pointer;
+}
+.deletebtn {
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding: 4px;
+}
+.deletebtn:hover {
+  cursor: pointer;
+  background: rgb(238, 141, 152);
+  border-radius: 50%;
+  transform: translateY(-3px);
+}
+.editbtn {
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding: 4px;
+}
+.editbtn:hover {
+  cursor: pointer;
+  background: rgb(115, 192, 236);
+  border-radius: 50%;
+  transform: translateY(-3px);
+}
+
+img {
+  background: transparent;
+}
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.volunteer-id {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.volunteer-lead {
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+}
+.volunteer-name {
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+}
+.volunteer-type {
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+}

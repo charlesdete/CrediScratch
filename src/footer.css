@@ -5,8 +5,11 @@
 }
 
 .footer-container {
-  max-width: 1200px;
   margin: auto;
+}
+.footer-content {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .footer-grid {
@@ -37,22 +40,29 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
 }
 
 .footer-subtitle {
   font-size: 0.9rem;
   color: #999;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
 }
 
 .footer-text {
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 1rem;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .social-links {
   display: flex;
   gap: 0.6rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
 }
 
 .social-icon {
@@ -86,6 +96,8 @@
   color: #ccc;
   cursor: pointer;
   transition: color 0.3s;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .footer-links button:hover {
@@ -97,6 +109,8 @@
   font-weight: bold;
   margin-bottom: 0.8rem;
   color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
 }
 
 .footer-contact .contact-item {
@@ -104,6 +118,10 @@
   align-items: center;
   gap: 0.5rem;
   margin: 0.4rem 0;
+}
+.contact-item span {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
 }
 
 .footer-bottom {
@@ -113,4 +131,6 @@
   margin-top: 2rem;
   font-size: 0.85rem;
   color: #888;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
 }

@@ -1,0 +1,79 @@
+.Team-container {
+  background: #b0b9e0;
+  padding: 20px;
+}
+.Team-content {
+  margin-left: 100px;
+  margin-right: 100px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Team-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h5Title {
+  font-size: xx-large;
+  font-weight: bolder;
+  text-decoration-line: overline;
+  text-decoration-color: #000;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+  font-size: 24px;
+}
+.member-container {
+  padding: 30px;
+  background: transparent;
+  border: 1px solid #fff;
+  margin-left: 100px;
+  margin-right: 100px;
+
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* show 4 images */
+  gap: 30px;
+  padding-right: 10px;
+  border: none;
+}
+.members {
+  background: #b7c1f1;
+  height: 100%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  padding: 10px;
+}
+.image-holder {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  height: 70%;
+
+  background-color: transparent;
+}
+.memberImg {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.member-name {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+.member-title {
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+  color: #000;
+}

@@ -1,0 +1,118 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(54, 35, 35); /* dark semi-transparent background */
+  z-index: 999; /* below the modal content */
+}
+
+.signin-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(41, 17, 17, 0.6); /* your desired dark color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.signup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
+  z-index: 1000;
+}
+.signup-form {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 90%; /* fill only the card */
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-modal {
+  align-self: flex-end;
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.close-modal:hover {
+  transform: translateY(-3px);
+}
+.login-content {
+  position: relative;
+  z-index: 1000; /* above overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+
+  width: 100%;
+  max-width: 700px; /* smaller than screen */
+  max-height: 85vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: auto; /* ensure it's centered */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.signin-form {
+  background-color: white;
+  border-radius: 12px;
+  width: 90%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center; /* aligns text and checkbox vertically */
+  gap: 8px; /* space between checkbox and label */
+  margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.btn-submit:hover {
+  transform: translateY(-3px);
+}
+h5 {
+  color: #000;
+  font-size: larger;
+  font-weight: 700;
+}

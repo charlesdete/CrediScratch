@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #a4f3c2;
+  background: rgb(111, 233, 134);
   gap: 50px;
 }
 /* Lock body scroll when modal is open */
@@ -23,20 +23,45 @@ body.modal-open {
 .donation-cont h2 {
   margin-bottom: 1rem; /* space between heading & button */
 }
-
-.donation {
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  background-color: #2563eb; /* blue */
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.donation-title {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
 }
-
+.volunteer-title {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+}
+.donation {
+  color: #a4f3c2;
+  border: none;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  line-height: 1.7em !important;
+  background-color: black;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  border-radius: 3px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  font-family: "Courier New", Courier, monospace;
+}
 .donation:hover {
-  background-color: #1d4ed8; /* darker blue */
+  color: black; /* optional hover effect */
+  transition: color 300ms ease 0ms;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  transform: translateY(-3px);
 }
 
 .volunteer-cont {
@@ -53,16 +78,34 @@ body.modal-open {
 }
 
 .volunteer {
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  background-color: #2563eb; /* blue */
-  color: #fff;
+  color: #a4f3c2;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  line-height: 1.7em !important;
+  background-color: black;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  border-radius: 3px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  font-family: "Courier New", Courier, monospace;
 }
-
 .volunteer:hover {
-  background-color: #1d4ed8; /* darker blue */
+  color: black; /* optional hover effect */
+  transition: color 300ms ease 0ms;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  transform: translateY(-3px);
 }

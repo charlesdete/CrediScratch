@@ -1,48 +1,58 @@
 .section2 {
-  padding: 30px;
-  height: 20vh;
-  background-color: black;
+  padding: 20px;
 }
-
+.section2-contents {
+  margin-left: 100px;
+  margin-right: 100px;
+}
 .sec-img {
-  padding: 10px;
-  height: 90%;
-  border-radius: 50%;
-  background-color: #fff;
-  align-items: center;
-  background-image: url(images/sunset.jpg);
-  background-size: cover;
-  background-position: center;
+  height: 50%;
 }
 
 .sec-img h5 {
-  color: #efefe5;
+  color: #000;
   font-size: xx-large;
   font-family: "Courier New", Courier, monospace;
-  font-weight: 900;
+  font-weight: 800;
   align-items: center;
   display: flex;
   justify-content: center;
 }
-
 .section2b {
-  padding: 30px;
-  align-items: center;
+  padding: 20px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+
   align-items: stretch;
 }
 
-.Sec-card2 .card {
+.Sec-card2 .card2 {
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 10px;
+
   overflow: hidden;
-  width: 16rem; /* Same as Bootstrap's default card width */
   background-color: #fff;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
+.card2:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.card2-body {
+  padding: 1rem;
+  flex: 1; /* makes the body stretch */
+  display: flex;
+  flex-direction: column;
+}
+
 .card2 img {
   background-size: cover;
   background-position: center;
@@ -56,21 +66,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  border-right: 3px solid #000;
-}
-
-.card2-body {
-  padding: 1rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .card2-title {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: 0.75rem;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .card2-text {
-  margin-bottom: 1rem;
-  color: #212529;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
 }

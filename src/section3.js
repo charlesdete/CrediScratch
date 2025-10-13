@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./section3.css";
-import contactImg from "./images/Contact.png";
 
 function Section3() {
   const [name, setName] = useState("");
@@ -38,16 +37,15 @@ function Section3() {
     } catch (error) {
       setError("Server error. Please try later.");
     } finally {
-      setLoading(false); // ✅ fix: stop loading after request
+      setLoading(false); //  fix: stop loading after request
     }
   };
-
 
   return (
     <>
       <div className="section3">
-        <div className="sec3-img">
-          <img src={contactImg} alt="" />
+        <div className="section3-title">
+          <h4>Contact Us</h4>
         </div>
 
         <form className="sec3-form" onSubmit={handleSubmit}>
@@ -86,7 +84,7 @@ function Section3() {
               onChange={(e) => setMessage(e.target.value)}
             />
 
-            <button type="submit" className="btn-submit" disabled={loading}>
+            <button className="btn" disabled={loading}>
               {loading ? "Sending message..." : "Send message"}
             </button>
           </div>

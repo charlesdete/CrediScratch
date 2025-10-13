@@ -1,25 +1,29 @@
 .section3 {
   padding: 20px;
-  background-color: #d7e4ef;
+  background: #0c184b;
 }
-.sec3-img {
-  align-items: center;
+.section3-title {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
   display: flex;
+  align-items: center;
   justify-content: center;
-  height: 10vh;
-  padding: 15px;
 }
-.sec3-img img {
-  height: 15vh;
-  width: 40%;
-  background: transparent;
-}
+
 .sec3-form {
   background-color: #e6f0ff; /* Light NGO-friendly color */
   display: flex;
   justify-content: center;
   padding: 30px;
   border-radius: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
 .form-details {
@@ -35,14 +39,21 @@ label {
   color: #333;
 }
 
+label {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
 input,
 textarea {
   padding: 10px;
-  border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 input:focus,
 textarea:focus {
@@ -55,16 +66,35 @@ textarea {
   resize: vertical;
 }
 
-.btn-submit {
-  padding: 12px;
+.btn {
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  background-color: #3d5afe;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  line-height: 1.7em !important;
+  background-color: #0c184b;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  border-radius: 3px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  font-family: "Courier New", Courier, monospace;
 }
-
-.btn-submit:hover {
-  background-color: #304ffe;
+.btn:hover {
+  color: #0c184b; /* optional hover effect */
+  transition: color 300ms ease 0ms;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  transform: translateY(-3px);
 }

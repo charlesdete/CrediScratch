@@ -23,14 +23,14 @@ function Section4() {
     <>
       <div className="sec4-buttons">
         <div className="donation-cont">
-          <h2 className="">Make a Donation</h2>
+          <h2 className="donation-title">Make a Donation</h2>
           <button className="donation" onClick={() => openModal("donation")}>
             Donation
           </button>
         </div>
 
         <div className="volunteer-cont">
-          <h2 className="">Join us on this Journey</h2>
+          <h2 className="volunteer-title">Join us on this Journey</h2>
           <button className="volunteer" onClick={() => openModal("volunteer")}>
             Volunteer
           </button>

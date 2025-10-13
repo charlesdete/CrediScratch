@@ -1,0 +1,220 @@
+/* Container */
+.project-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #f4f6fb;
+  min-height: 80vh;
+  padding: 8px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+/* Form */
+.project-form {
+  background: #fff;
+  padding: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Title */
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  font-size: 14px;
+}
+
+/* Textarea */
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* Button */
+.submit-btn {
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+  padding: 10px;
+  background: rgb(25, 95, 225);
+  color: #fff;
+  border: none;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: rgb(15, 70, 180);
+  transform: translateY(-3px);
+}
+.overlay {
+  flex: 1;
+  background: rgb(222, 232, 250);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 20px;
+  margin-right: 10px;
+
+  /* Scrolling */
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0; /* below the modal content */
+}
+.manage-container {
+  width: 100%;
+  background: #fff;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.manage-project-title {
+  padding: 10px;
+  font-weight: 800;
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+}
+.manage-project-contents {
+  padding: 10px;
+  background: rgb(61, 127, 249);
+
+  display: flex; /* make children (cards) line up */
+  flex-direction: row; /* horizontal alignment */
+  flex-wrap: wrap; /* wrap to new line if needed */
+  gap: 15px; /* spacing between cards */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.project-list {
+  padding: 10px;
+  background: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-details {
+  display: flex; /* align items in a row */
+  flex-direction: row; /* horizontal layout */
+  align-items: center; /* align vertically center */
+  justify-content: space-between; /* spread them out */
+  cursor: pointer;
+  gap: 15px; /* spacing between items */
+}
+.deletebtn {
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding: 4px;
+}
+.deletebtn:hover {
+  cursor: pointer;
+  background: rgb(238, 141, 152);
+  border-radius: 50%;
+  transform: translateY(-3px);
+}
+.editbtn {
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding: 4px;
+}
+.editbtn:hover {
+  cursor: pointer;
+  background: rgb(115, 192, 236);
+  border-radius: 50%;
+  transform: translateY(-3px);
+}
+
+img {
+  background: transparent;
+}
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.project-id {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.project-lead {
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+}
+.project-name {
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+}
+.project-description {
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
+  width: 300px;
+  height: 80px;
+  /* scrolling */
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+}
+.project-description::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-description::-webkit-scrollbar-thumb {
+  background-color: rgb(136, 170, 233);
+  border-radius: 4px;
+}
+
+.project-description::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(25, 95, 225);
+}
+
+.project-description::-webkit-scrollbar-track {
+  background: transparent;
+}

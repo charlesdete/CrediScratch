@@ -1,0 +1,59 @@
+.AboutContainer {
+  height: 30vh;
+  background: #b0b9e0;
+  padding: 20px;
+}
+
+.AboutTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AboutH5 {
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+  text-decoration-line: overline;
+  text-decoration-color: #000;
+}
+.AboutContent {
+  padding: 20px;
+}
+.AboutSubContent {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 100%;
+}
+.AboutImage {
+  width: 50%;
+  height: 100%;
+}
+img {
+  height: 100%;
+  width: 100%;
+  background-image: cover;
+  background-position: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.content {
+  display: block;
+  width: 50%;
+}
+h5 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  font-weight: 800;
+}
+h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
+}
