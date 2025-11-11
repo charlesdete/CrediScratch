@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./login.css";
-import bcrypt from "bcryptjs";
 
 function Signup({ closeModal }) {
   const [name, setName] = useState("");

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./donations.css";
 import DeleteImg from "./images/delete.png";
 import EditImg from "./images/edit.png";
-import AddImg from "./images/add.png";
+
 function DonationsDash({ onEdit }) {
   const [donations, setDonations] = useState([]);
 

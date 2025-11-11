@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./dashboard.css";
-import AddImg from "./images/add.png";
+
 function Display1() {
   const [checked, setChecked] = useState(false);
   const [teams, setTeams] = useState({});
