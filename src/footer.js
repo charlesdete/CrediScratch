@@ -42,16 +42,36 @@ function Footer() {
                 and political rights in a healthy and sustainable environment.
               </p>
               <div className="social-links">
-                <a href="#" className="social-icon">
+                <a
+                  href="https://facebook.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
                   <Facebook />
                 </a>
-                <a href="#" className="social-icon">
+                <a
+                  href="https://twitter.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
                   <Twitter />
                 </a>
-                <a href="#" className="social-icon">
+                <a
+                  href="https://linkedin.com/in/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
                   <Linkedin />
                 </a>
-                <a href="#" className="social-icon">
+                <a
+                  href="https://instagram.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
                   <Instagram />
                 </a>
               </div>
