@@ -8,7 +8,7 @@ import Section3 from "./section3";
 import Section4 from "./section4";
 import Footer from "./footer";
 import Team from "./team";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link } from "react-router";
 import Partners from "./partners";
 import SignIn from "./login";
 import Signup from "./register";
@@ -55,89 +55,89 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Routes>
-          {/* Home */}
-          <Route
-            path="/"
-            element={
-              <Layout isLoggedIn={!!user}>
-                <div className="wrapper">
-                  <img src={masaiImg} className="wrapperImg" alt="" />
-                  <div className="wrapper-contents">
-                    <h5 className="heroH5">
-                      CReDI strengthens the capacity of minority, slum and
-                      marginalized communities in Kenya to secure their
-                      economic, social, cultural and political rights in a
-                      healthy and sustainable environment.
-                    </h5>
+      {/* <Router> */}
+      <Routes>
+        {/* Home */}
+        <Route
+          path="/"
+          element={
+            <Layout isLoggedIn={!!user}>
+              <div className="wrapper">
+                <img src={masaiImg} className="wrapperImg" alt="" />
+                <div className="wrapper-contents">
+                  <h5 className="heroH5">
+                    CReDI strengthens the capacity of minority, slum and
+                    marginalized communities in Kenya to secure their economic,
+                    social, cultural and political rights in a healthy and
+                    sustainable environment.
+                  </h5>
 
-                    <div className="buttons">
-                      <h3
-                        className="SigninArrow"
-                        onClick={() => openModal("login")}
-                      >
-                        {/* SignIn &#8594; */}
-                      </h3>
+                  <div className="buttons">
+                    <h3
+                      className="SigninArrow"
+                      onClick={() => openModal("login")}
+                    >
+                      {/* SignIn &#8594; */}
+                    </h3>
 
-                      <Link to="/about" className="link">
-                        Learn more
-                      </Link>
+                    <Link to="/about" className="link">
+                      Learn more
+                    </Link>
 
-                      <h3
-                        className="SigninArrow-prev"
-                        onClick={() => openModal("register")}
-                      >
-                        {/* &#8592; SignUp */}
-                      </h3>
-                    </div>
+                    <h3
+                      className="SigninArrow-prev"
+                      onClick={() => openModal("register")}
+                    >
+                      {/* &#8592; SignUp */}
+                    </h3>
                   </div>
                 </div>
+              </div>
 
-                {/* Sections */}
-                <Section1 />
-                <Section2 />
-                <Gallery />
-                <Section3 />
-                <Section4 />
-                <Partners />
-              </Layout>
-            }
-          />
+              {/* Sections */}
+              <Section1 />
+              <Section2 />
+              <Gallery />
+              <Section3 />
+              <Section4 />
+              <Partners />
+            </Layout>
+          }
+        />
 
-          {/* About */}
+        {/* About */}
+        <Route
+          path="/about"
+          element={
+            <Layout isLoggedIn={!!user}>
+              <About />
+            </Layout>
+          }
+        />
+
+        {/* Team */}
+        <Route
+          path="/team"
+          element={
+            <Layout>
+              <Team />
+            </Layout>
+          }
+        />
+        <Route path="/signin" element={<SignIn />} />
+        {/* Protected Dashboard (Admin only) */}
+        <Route element={<ProtectedRoute requiredRole={1} />}>
           <Route
-            path="/about"
+            path="/dashboard"
             element={
               <Layout isLoggedIn={!!user}>
-                <About />
+                <Dashboard />
               </Layout>
             }
           />
-
-          {/* Team */}
-          <Route
-            path="/team"
-            element={
-              <Layout>
-                <Team />
-              </Layout>
-            }
-          />
-          <Route path="/signin" element={<SignIn />} />
-          {/* Protected Dashboard (Admin only) */}
-          <Route element={<ProtectedRoute requiredRole={1} />}>
-            <Route
-              path="/dashboard"
-              element={
-                <Layout isLoggedIn={!!user}>
-                  <Dashboard />
-                </Layout>
-              }
-            />
-          </Route>
-        </Routes>
-      </Router>
+        </Route>
+      </Routes>
+      {/* </Router> */}
 
       {/* Modals */}
       {activeModal === "login" && <SignIn closeModal={closeModal} />}

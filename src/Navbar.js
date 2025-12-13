@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.css";
 import CredImg from "./images/credilogo.png";
 
-import { Link as RouterLink, useNavigate } from "react-router-dom"; // router link
+import { Link as RouterLink, useNavigate } from "react-router"; // router link
 import Dropdown from "./dropdown";
 import Dropdown1 from "./dropdown1";
 
