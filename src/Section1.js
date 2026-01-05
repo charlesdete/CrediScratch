@@ -8,6 +8,7 @@ function Section1() {
   return (
     <>
       <div className="Section1">
+        <div className="Section1-wrapper">
         <div className="Sec-card1">
           <div
             className="card"
@@ -53,7 +54,7 @@ function Section1() {
             <img src={valueImg} className="card-img" alt="" />
             <div className="card-body">
               <h5 className="card-title">Core Values</h5>
-              <p className="card-text">
+              <p className="card-text" style={{ paddingLeft: "20px" }}>
                 The Organization’s core values include; equality and equity,
                 good governance, integrity and reliability in all operations,
                 gender mainstreaming, respect for diversity, human rights and
@@ -75,6 +76,7 @@ function Section1() {
             </div>
             <img src={missionImg} className="card-img" alt="" />
           </div>
+        </div>
         </div>
       </div>
     </>

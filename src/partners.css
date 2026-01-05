@@ -5,7 +5,7 @@
   align-items: center;
   background: rgb(240, 128, 36);
   padding: 20px;
-  min-height: 40vh;
+  height: 30vh;
 }
 .partner-content {
   margin-left: 100px;
@@ -24,7 +24,7 @@
 }
 .partnersName {
   font-size: 24px;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 800;
 }
 .main-container {
@@ -90,4 +90,43 @@
 
 .carousel-button:hover {
   background: rgba(0, 0, 0, 0.1);
+}
+
+
+/* For Mobile */
+@media screen and (max-width: 500px) {
+  .partner-container{
+    height:200px ;
+    
+    
+  }
+  .partner-content{
+    display: block;
+    width: 100%;
+  }
+  .partners-title{
+    font-size: 13px;
+ align-items: center;
+ justify-content: center;
+ display: flex;
+  }
+  p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+  }
+  .carousel-button{
+    padding: 3px;
+  }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .partner-container {
+        width: 600px;
+    }
 }

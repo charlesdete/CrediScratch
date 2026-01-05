@@ -24,11 +24,11 @@ body.modal-open {
   margin-bottom: 1rem; /* space between heading & button */
 }
 .donation-title {
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 800;
 }
 .volunteer-title {
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 800;
 }
 .donation {
@@ -53,7 +53,7 @@ body.modal-open {
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .donation:hover {
   color: black; /* optional hover effect */
@@ -99,7 +99,7 @@ body.modal-open {
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .volunteer:hover {
   color: black; /* optional hover effect */
@@ -108,4 +108,27 @@ body.modal-open {
   background: #fff;
   border: none;
   transform: translateY(-3px);
+}
+
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+    .wrapper {
+    
+        height :200px;
+    }
+    .heroH5{
+      font-size:10px ;
+      font-weight: 700;
+    }
+    .wrapper-contents{
+      width:50% ;
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .wrapper {
+        width: 600px;
+    }
 }

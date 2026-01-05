@@ -1,8 +1,7 @@
 .navbar {
-  height: 15vh;
+  height: 12vh;
   display: flex;
   align-items: center;
-
   /* Push links to left, logo to right */
   padding: 20px; /* Optional side spacing */
 }
@@ -32,7 +31,7 @@ img {
 .logo h1 {
   font-size: small;
   display: flex;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 700;
 }
 .links {
@@ -52,7 +51,7 @@ ul {
   cursor: pointer;
   text-decoration: none; /* optional: remove underline */
   color: inherit; /* optional: keep same text color */
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 700;
   font-size: 16px;
   transition: color 0.3s ease; /* smooth hover effect */
@@ -83,4 +82,27 @@ ul {
 .navbar ul li:hover .dropdown {
   display: block;
   cursor: pointer;
+}
+
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+    .navbar {
+    
+
+        height:100px;
+    }
+    .navbar-contents{
+    
+       display: flex;
+  justify-content: space-between;
+  align-items: center;
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .navbar {
+        width: 600px;
+    }
 }

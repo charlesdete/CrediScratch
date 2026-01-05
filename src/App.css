@@ -3,16 +3,11 @@ body.modal-open {
 }
 .wrapper {
   position: relative; /* allow absolute children */
-  height: 80vh;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
+  height: 80vh; 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 10px;
   overflow: hidden; /* prevent image from overflowing */
 }
 
@@ -20,11 +15,11 @@ body.modal-open {
   position: absolute; /* take it out of normal flow */
   top: 0;
   left: 0;
-  width: 100%; /* cover full wrapper */
+   /* cover full wrapper */
   height: 100%; /* cover full wrapper */
-  object-fit: cover; /* scale without distortion */
+
   z-index: 0; /* sit behind content */
-  filter: brightness(50%); /* darken for readability */
+  filter: brightness(40%); /* darken for readability */
 }
 
 .wrapper-contents {
@@ -32,9 +27,7 @@ body.modal-open {
   z-index: 1; /* higher than image */
   margin-left: 100px;
   margin-right: 100px;
-  width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center; /* vertically center */
@@ -45,7 +38,7 @@ body.modal-open {
   color: #fff;
   font-size: xx-large;
   font-weight: 900;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding: 10px;
 }
 
@@ -78,7 +71,7 @@ body.modal-open {
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 .link:hover {
   color: black; /* optional hover effect */
@@ -129,4 +122,27 @@ body.modal-open {
   color: #3d5afe;
   cursor: pointer;
   border: none;
+}
+
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+    .wrapper {
+    
+        height :200px;
+    }
+    .heroH5{
+      font-size:10px ;
+      font-weight: 700;
+    }
+    .wrapper-contents{
+      width:50% ;
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .wrapper {
+        width: 600px;
+    }
 }
