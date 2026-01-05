@@ -62,8 +62,8 @@ function App() {
           path="/"
           element={
             <Layout isLoggedIn={!!user}>
-              <div className="wrapper">
-                <img src={masaiImg} className="wrapperImg" alt="" />
+              <div className="wrapper-app">
+                <img src={masaiImg} className="wrapper-Img" alt="" />
                 <div className="wrapper-contents">
                   <h5 className="heroH5">
                     CReDI strengthens the capacity of minority, slum and

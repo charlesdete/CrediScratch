@@ -9,7 +9,7 @@ function Section2() {
   return (
     <>
       <div className="section2">
-        <div className="section2-contents">
+    
           <div className="sec-img">
             <h5>Our Programmes</h5>
           </div>
@@ -94,7 +94,7 @@ function Section2() {
               </div>
             </div>
           </div>
-        </div>
+        
       </div>
     </>
   );

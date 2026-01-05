@@ -88,16 +88,21 @@ ul {
 /* For Mobile */
 @media screen and (max-width: 540px) {
     .navbar {
-    
-
-        height:100px;
+        height:80px;
     }
-    .navbar-contents{
     
-       display: flex;
-  justify-content: space-between;
-  align-items: center;
+    .logo{
+      display: flex;
+      left: 30px;
+      position: absolute;
     }
+    .links{
+      display: flex;
+      right: 30px;
+      position: absolute;
+    }
+    
+    
 }
 
 /* For Tablets */

@@ -1,7 +1,7 @@
 body.modal-open {
   overflow: hidden;
 }
-.wrapper {
+.wrapper-app {
   position: relative; /* allow absolute children */
   height: 80vh; 
   display: flex;
@@ -11,7 +11,7 @@ body.modal-open {
   overflow: hidden; /* prevent image from overflowing */
 }
 
-.wrapperImg {
+.wrapper-Img {
   position: absolute; /* take it out of normal flow */
   top: 0;
   left: 0;
@@ -127,9 +127,9 @@ body.modal-open {
 
 /* For Mobile */
 @media screen and (max-width: 540px) {
-    .wrapper {
+    .wrapper-app {
     
-        height :200px;
+        height :400px;
     }
     .heroH5{
       font-size:10px ;
@@ -142,7 +142,7 @@ body.modal-open {
 
 /* For Tablets */
 @media screen and (min-width: 540px) and (max-width: 780px) {
-    .wrapper {
+    .wrapper-app {
         width: 600px;
     }
 }

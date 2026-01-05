@@ -103,22 +103,10 @@ textarea {
 
 /* For Mobile */
 @media screen and (max-width: 540px) {
-    .wrapper {
     
-        height :200px;
-    }
-    .heroH5{
-      font-size:10px ;
-      font-weight: 700;
-    }
-    .wrapper-contents{
-      width:50% ;
-    }
 }
 
 /* For Tablets */
 @media screen and (min-width: 540px) and (max-width: 780px) {
-    .wrapper {
-        width: 600px;
-    }
+   
 }
