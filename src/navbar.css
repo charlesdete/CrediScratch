@@ -2,9 +2,10 @@
   height: 12vh;
   display: flex;
   align-items: center;
-  /* Push links to left, logo to right */
-  padding: 20px; /* Optional side spacing */
+  padding: 20px;
 }
+
+/* Inner container */
 .navbar-contents {
   margin-left: 100px;
   margin-right: 100px;
@@ -14,63 +15,63 @@
   width: 100%;
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
 }
-img {
+
+.logo img {
   height: 60px;
   width: 60px;
-  background-image: url(images/credilogo.png);
-  background-size: cover;
-  background-position: center;
-  align-items: center;
-  border-color: none;
+  object-fit: contain;
 }
+
 .logo h1 {
-  font-size: small;
-  display: flex;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 700;
 }
+
+/* Links */
 .links {
   display: flex;
   align-items: center;
 }
 
-ul {
+.links ul {
   display: flex;
-  gap: 30px; /* Space between nav items */
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.links ul li a,
-.links ul li Link {
+
+.links ul li a {
   cursor: pointer;
-  text-decoration: none; /* optional: remove underline */
-  color: inherit; /* optional: keep same text color */
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 700;
   font-size: 16px;
-  transition: color 0.3s ease; /* smooth hover effect */
+  transition: color 0.3s ease;
 }
 
-.links ul li a:hover,
-.links ul li Link:hover {
-  color: rgb(15, 60, 129); /* change color on hover */
+.links ul li a:hover {
+  color: rgb(15, 60, 129);
 }
-/* navbar.css */
+
+/* Dropdowns */
 .navbar ul li {
-  position: relative; /* needed for absolute child */
+  position: relative;
 }
 
 .dropdownProfile,
 .dropdown {
   display: none;
   position: absolute;
-  top: 100%; /* show below the parent li */
+  top: 100%;
   left: 0;
   background: white;
   padding: 10px;
@@ -81,34 +82,50 @@ ul {
 .navbar ul li:hover .dropdownProfile,
 .navbar ul li:hover .dropdown {
   display: block;
-  cursor: pointer;
 }
 
-
-/* For Mobile */
+/* =========================
+   MOBILE (Phones)
+   ========================= */
 @media screen and (max-width: 540px) {
-    .navbar {
-        height:80px;
-      
-    }
-    
-    .logo{
-      display: flex;
-      left: 30px;
-      position: absolute;
-    }
-    .links{
-      display: flex;
-      right: 30px;
-      position: absolute;
-    }
-    
-    
+  .navbar {
+    height: auto;
+    padding: 15px;
+  }
+
+  .navbar-contents {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .logo h1 {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .links ul {
+    gap: 15px;
+  }
+
+  .links ul li a {
+    font-size: 14px;
+  }
 }
 
-/* For Tablets */
-@media screen and (min-width: 540px) and (max-width: 780px) {
-    .navbar {
-        width: 600px;
-    }
+/* =========================
+   TABLETS
+   ========================= */
+@media screen and (min-width: 541px) and (max-width: 780px) {
+  .navbar-contents {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .logo h1 {
+    font-size: 13px;
+  }
+
+  .links ul {
+    gap: 20px;
+  }
 }
