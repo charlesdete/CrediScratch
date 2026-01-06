@@ -2,6 +2,8 @@
   padding: 20px;
   background-color: rgb(111, 233, 134);
 }
+
+/* Layout wrapper */
 .gallery-contents {
   margin-left: 100px;
   margin-right: 100px;
@@ -10,34 +12,37 @@
   gap: 30px;
   justify-content: space-between;
 }
+
+/* Text section */
 .gallery-head {
-  align-items: center;
-  justify-content: center;
-  display: block;
   width: 50%;
 }
+
 .gallery-title {
   font-size: 24px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 800;
   padding: 5px;
-
   color: #000;
 }
+
 .gallery-story {
   color: #000;
   padding-top: 20px;
   padding-right: 20px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 600;
 }
+
+/* Carousel */
 .carousel {
   width: 40%;
   height: 40vh;
   position: relative;
-  padding: 30px;
+  padding: 20px;
 }
 
+/* Slides */
 .carousel > ul {
   margin: 0;
   padding: 0;
@@ -50,12 +55,6 @@
   opacity: 0;
   display: none;
 }
-.slideImg {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
 
 .slide.active {
   display: block;
@@ -63,85 +62,80 @@
 }
 
 .slide > img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 30px;
 }
 
+/* Buttons */
 .carousel-button {
   position: absolute;
-  background: none;
   z-index: 2;
   border: none;
-  font-size: 4rem;
+  font-size: 3rem;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.carousel-button:hover,
-.carousel-button:focus {
-  color: white;
+  color: rgba(255, 255, 255, 0.6);
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-.carousel-button:focus {
-  outline: 1px solid black;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
 }
 
 .carousel-button.prev {
-  left: 30px;
+  left: 10px;
 }
 
 .carousel-button.next {
   right: 10px;
 }
 
-
-/* For Mobile */
+/* =========================
+   MOBILE (Phones)
+   ========================= */
 @media screen and (max-width: 540px) {
-   
-   .gallery-contents{
-    
-    display: block;
-    align-items:center ;
-    justify-content: center;
-   }
-   .gallery-title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   }
-   .gallery-story{
-    margin-right:10px ;
-    
-     display: flex;
-    align-items: center;
-    justify-content: center;
-    width:200px ;
-   }
-   .carousel{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    height:200px ;
-    border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-   }
- 
+  .gallery-contents {
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gallery-head {
+    width: 100%;
+  }
+
+  .gallery-title {
+    font-size: 20px;
+  }
+
+  .gallery-story {
+    padding-right: 0;
+  }
+
+  .carousel {
+    width: 90%;
+    height: 220px;
+    padding: 10px;
+  }
 }
 
-/* For Tablets */
-@media screen and (min-width: 540px) and (max-width: 780px) {
-    .gallery-section {
-        width: 600px;
-    }
+/* =========================
+   TABLETS
+   ========================= */
+@media screen and (min-width: 541px) and (max-width: 780px) {
+  .gallery-contents {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .gallery-head {
+    width: 55%;
+  }
+
+  .carousel {
+    width: 45%;
+    height: 30vh;
+  }
 }

@@ -9,7 +9,7 @@ function Section1() {
     <>
       <div className="Section1">
         <div className="Section1-wrapper">
-        <div className="Sec-card1">
+        
           <div
             className="card"
             style={{ backgroundColor: "#0c184b", color: "#fff" }}
@@ -25,10 +25,10 @@ function Section1() {
                 established in the year 2021.
               </p>
             </div>
-          </div>
+        
         </div>
 
-        <div className="Sec-card1">
+      
           <div
             className="card"
             style={{ backgroundColor: "rgb(240, 128, 36)" }}
@@ -44,9 +44,9 @@ function Section1() {
             </div>
             <img src={visionImg} className="card-img" alt="" />
           </div>
-        </div>
+        
 
-        <div className="Sec-card1">
+        
           <div
             className="card"
             style={{ backgroundColor: "rgb(111, 233, 134)" }}
@@ -62,9 +62,9 @@ function Section1() {
               </p>
             </div>
           </div>
-        </div>
+        
 
-        <div className="Sec-card1">
+        
           <div className="card" style={{ backgroundColor: "#ecec38ff" }}>
             <div className="card-body">
               <h5 className="card-title">Our Mission</h5>
@@ -77,7 +77,7 @@ function Section1() {
             <img src={missionImg} className="card-img" alt="" />
           </div>
         </div>
-        </div>
+        
       </div>
     </>
   );
