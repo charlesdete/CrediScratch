@@ -1,5 +1,4 @@
 .sec4-buttons {
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,9 +7,9 @@
 }
 
 /* Lock body scroll when modal is open */
-body.modal-open {
+/* body.modal-open {
   overflow: hidden;
-}
+} */
 
 /* Shared container styles */
 .donation-cont,

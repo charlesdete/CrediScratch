@@ -63,7 +63,7 @@ function Volunteer({ closeModal }) {
 
   return (
     <div className="modal">
-      <div className="overlay" onClick={closeModal}></div>
+      
       <div className="modal-content">
         <button className="close-modal" onClick={closeModal}>
           CLOSE
