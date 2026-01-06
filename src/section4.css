@@ -1,122 +1,92 @@
 .sec4-buttons {
-  height: 30vh;
+  
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgb(111, 233, 134);
   gap: 50px;
 }
+
 /* Lock body scroll when modal is open */
 body.modal-open {
   overflow: hidden;
 }
 
-.donation-cont {
-  display: flex;
-  flex-direction: column; /* stack heading & button vertically */
-  align-items: center; /* center horizontally */
-  justify-content: center; /* optional: center vertically if container has height */
-  text-align: center;
-  margin: 2rem 0; /* add some spacing */
-}
-
-.donation-cont h2 {
-  margin-bottom: 1rem; /* space between heading & button */
-}
-.donation-title {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 800;
-}
-.volunteer-title {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 800;
-}
-.donation {
-  color: #a4f3c2;
-  border: none;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 0.3em 1em;
-  line-height: 1.7em !important;
-  background-color: black;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  border: 2px solid;
-  border-radius: 3px;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.donation:hover {
-  color: black; /* optional hover effect */
-  transition: color 300ms ease 0ms;
-  cursor: pointer;
-  background: #fff;
-  border: none;
-  transform: translateY(-3px);
-}
-
+/* Shared container styles */
+.donation-cont,
 .volunteer-cont {
   display: flex;
-  flex-direction: column; /* stack heading & button vertically */
-  align-items: center; /* center horizontally */
-  justify-content: center; /* optional: center vertically if container has height */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 2rem 0; /* add some spacing */
+  margin: 2rem 0;
 }
 
-.volunteer-cont h2 {
-  margin-bottom: 1rem; /* space between heading & button */
+/* Titles */
+.donation-title,
+.volunteer-title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
 
-.volunteer {
+/*  SHARED BUTTON STYLE */
+.donation {
   color: #a4f3c2;
+  background-color: black;
   border: none;
-  text-decoration: none;
   font-size: 20px;
   font-weight: 500;
   padding: 0.3em 1em;
   line-height: 1.7em !important;
-  background-color: black;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  border: 2px solid;
-  border-radius: 3px;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.volunteer:hover {
-  color: black; /* optional hover effect */
-  transition: color 300ms ease 0ms;
+  border-radius: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   cursor: pointer;
-  background: #fff;
+  transition: all 0.2s ease;
+}
+
+/*  SHARED HOVER EFFECT */
+.donation:hover {
+  color: black;
+  background: white;
+  transform: translateY(-3px);
+}
+.volunteer {
+  color: #a4f3c2;
+  background-color: black;
   border: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  line-height: 1.7em !important;
+  border-radius: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/*  SHARED HOVER EFFECT */
+.volunteer:hover {
+  color: black;
+  background: white;
   transform: translateY(-3px);
 }
 
-
-/* For Mobile */
+/* MOBILE */
 @media screen and (max-width: 540px) {
-   
+  .sec4-buttons {
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    padding: 30px 15px;
+  }
 }
 
-/* For Tablets */
-@media screen and (min-width: 540px) and (max-width: 780px) {
-   
+/* TABLET */
+@media screen and (min-width: 541px) and (max-width: 780px) {
+  .sec4-buttons {
+    gap: 30px;
+    height: auto;
+  }
 }

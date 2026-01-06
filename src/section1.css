@@ -73,10 +73,19 @@
   }
 
   .card-img {
+  
     width: 100%;
     height: 180px;
+    border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   }
-
+ img{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ }
   .card-title {
     font-size: 20px;
   }
