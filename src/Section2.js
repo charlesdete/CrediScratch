@@ -40,12 +40,12 @@ function Section2() {
           
               <div
                 className="card2"
-                style={{ backgroundColor: "rgb(240, 128, 36)", color: "#fff" }}
+                style={{ backgroundColor: " #e6f0ff" }}
               >
                 <img src={govtImg} className="card2-img-top" alt="" />
 
                 <div className="card2-body">
-                  <h5 className="card2-title" style={{ color: "#fff" }}>
+                  <h5 className="card2-title" style={{ color: "#000" }}>
                     Governance and development programme
                   </h5>
                   <p className="card2-text">
@@ -60,7 +60,7 @@ function Section2() {
             
               <div
                 className="card2"
-                style={{ backgroundColor: "rgb(111, 233, 134)" }}
+                style={{ backgroundColor: " #e6f0ff" }}
               >
                 <img src={healthImg} className="card2-img-top" alt="" />
                 <div className="card2-body">
@@ -78,10 +78,10 @@ function Section2() {
             
 
             
-              <div className="card2" style={{ backgroundColor: "#eeee43ff" }}>
+              <div className="card2" style={{ backgroundColor: "#0c184b", color: "#fff" }}>
                 <img src={eduImg} className="card2-img-top" alt="" />
                 <div className="card2-body">
-                  <h5 className="card2-title">
+                  <h5 className="card2-title" style={{ color: "#fff" }}>
                     Education and capacity building programme
                   </h5>
                   <p className="card2-text">

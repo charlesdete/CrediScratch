@@ -31,13 +31,13 @@ function Section1() {
       
           <div
             className="card"
-            style={{ backgroundColor: "rgb(240, 128, 36)" }}
+            style={{ backgroundColor: " #e6f0ff", color: "#000" }}
           >
             <div className="card-body">
-              <h5 className="card-title" style={{ color: "#fff" }}>
+              <h5 className="card-title" style={{ color: "#000" }}>
                 Our Vision
               </h5>
-              <p className="card-text" style={{ color: "#fff" }}>
+              <p className="card-text" style={{ color: "#000" }}>
                 A just, equitable and informed society that cares for the
                 environment
               </p>
@@ -49,11 +49,11 @@ function Section1() {
         
           <div
             className="card"
-            style={{ backgroundColor: "rgb(111, 233, 134)" }}
+            style={{ backgroundColor: "#0c184b", color: "#fff" }}
           >
             <img src={valueImg} className="card-img" alt="" />
             <div className="card-body">
-              <h5 className="card-title">Core Values</h5>
+              <h5 className="card-title" style={{  color: "#fff" }}>Core Values</h5>
               <p className="card-text" style={{ paddingLeft: "20px" }}>
                 The Organization’s core values include; equality and equity,
                 good governance, integrity and reliability in all operations,
@@ -65,7 +65,7 @@ function Section1() {
         
 
         
-          <div className="card" style={{ backgroundColor: "#ecec38ff" }}>
+          <div className="card" style={{ backgroundColor: " #e6f0ff",color:"#000" }}>
             <div className="card-body">
               <h5 className="card-title">Our Mission</h5>
               <p className="card-text">

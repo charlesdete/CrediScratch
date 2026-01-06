@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(111, 233, 134);
+  background:white;
   gap: 50px;
 }
 
@@ -32,8 +32,8 @@
 
 /*  SHARED BUTTON STYLE */
 .donation {
-  color: #a4f3c2;
-  background-color: black;
+  color:white;
+  background-color: #0c184b;
   border: none;
   font-size: 20px;
   font-weight: 500;
@@ -52,8 +52,8 @@
   transform: translateY(-3px);
 }
 .volunteer {
-  color: #a4f3c2;
-  background-color: black;
+  color: white;
+  background-color:#0c184b;
   border: none;
   font-size: 20px;
   font-weight: 500;
