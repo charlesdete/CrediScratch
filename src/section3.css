@@ -100,13 +100,57 @@ textarea {
 }
 
 
-
-/* For Mobile */
+/* =========================
+   MOBILE (Phones)
+   ========================= */
 @media screen and (max-width: 540px) {
-    
+  .section3 {
+    padding: 15px;
+  }
+
+  .section3-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .sec3-form {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .form-details {
+    max-width: 80%;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 0.6em 1em;
+  }
 }
 
-/* For Tablets */
-@media screen and (min-width: 540px) and (max-width: 780px) {
-   
+/* =========================
+   TABLETS
+   ========================= */
+@media screen and (min-width: 541px) and (max-width: 780px) {
+  .section3 {
+    padding: 20px;
+  }
+
+  .sec3-form {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 25px;
+    width: auto;
+  }
+
+  .form-details {
+    max-width: 400px;
+  }
+
+  .section3-title {
+    font-size: 22px;
+  }
 }

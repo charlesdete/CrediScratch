@@ -15,7 +15,7 @@ function Section2() {
           </div>
 
           <div className="section2b">
-            <div className="Sec-card2">
+            
               <div
                 className="card2"
                 style={{ backgroundColor: "#0c184b", color: "#fff" }}
@@ -35,9 +35,9 @@ function Section2() {
                   </p>
                 </div>
               </div>
-            </div>
+            
 
-            <div className="Sec-card2">
+          
               <div
                 className="card2"
                 style={{ backgroundColor: "rgb(240, 128, 36)", color: "#fff" }}
@@ -55,9 +55,9 @@ function Section2() {
                   </p>
                 </div>
               </div>
-            </div>
+            
 
-            <div className="Sec-card2">
+            
               <div
                 className="card2"
                 style={{ backgroundColor: "rgb(111, 233, 134)" }}
@@ -75,9 +75,9 @@ function Section2() {
                   </p>
                 </div>
               </div>
-            </div>
+            
 
-            <div className="Sec-card2">
+            
               <div className="card2" style={{ backgroundColor: "#eeee43ff" }}>
                 <img src={eduImg} className="card2-img-top" alt="" />
                 <div className="card2-body">
@@ -90,7 +90,7 @@ function Section2() {
                     experimental learning, innovation and media literacy for
                     students, educators and institutions.
                   </p>
-                </div>
+              
               </div>
             </div>
           </div>
