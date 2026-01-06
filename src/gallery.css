@@ -107,7 +107,7 @@
 @media screen and (max-width: 540px) {
    
    .gallery-contents{
-    width:100% ;
+    
     display: block;
     align-items:center ;
     justify-content: center;

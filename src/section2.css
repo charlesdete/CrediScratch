@@ -1,5 +1,6 @@
 .section2 {
   padding: 20px;
+  
 }
 .section2-contents {
   margin-left: 100px;
@@ -87,7 +88,7 @@
 @media screen and (max-width: 540px) {
    
    .section2-contents{
-   width:100% ;
+  
    display: flex;
    align-items: center;
    justify-content: center;
