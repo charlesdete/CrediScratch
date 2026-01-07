@@ -4,7 +4,7 @@ import CredImg from "./images/credilogo.png";
 
 import { Link as RouterLink} from "react-router-dom";
 import Dropdown from "./dropdown";
-import Dropdown1 from "./dropdown1";
+
 
 function Navbar() {
 
@@ -23,7 +23,7 @@ function Navbar() {
           <ul>
             <li>
               <RouterLink to="/">Home</RouterLink>
-              <Dropdown1 />
+              
             </li>
 
             <li>
