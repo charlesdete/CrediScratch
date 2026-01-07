@@ -2,17 +2,14 @@ import React from "react";
 import "./navbar.css";
 import CredImg from "./images/credilogo.png";
 
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { Link as RouterLink} from "react-router-dom";
 import Dropdown from "./dropdown";
 import Dropdown1 from "./dropdown1";
 
-function Navbar({ isLoggedIn }) {
-  const navigate = useNavigate();
+function Navbar() {
 
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    navigate("/");
-  };
+
+ 
 
   return (
     <div className="navbar">
