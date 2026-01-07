@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
+import CryptoJS from "crypto-js";
+import { Routes, Route, Link } from "react-router-dom";
+
 import "./App.css";
+
 import Navbar from "./Navbar";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
@@ -8,16 +12,16 @@ import Section3 from "./section3";
 import Section4 from "./section4";
 import Footer from "./footer";
 import Team from "./team";
-import { Route, Routes, Link } from "react-router";
 import Partners from "./partners";
 import SignIn from "./login";
 import Signup from "./register";
 import About from "./about";
 import ProtectedRoute from "./protectedRoute";
 import Dashboard from "./dashboard";
+
 import masaiImg from "./images/masai.png";
 
-// Layout wrapper (Navbar + Page + Footer)
+// Layout wrapper (Navbar + main content + Footer)
 function Layout({ isLoggedIn, children }) {
   return (
     <>
@@ -31,9 +35,11 @@ function Layout({ isLoggedIn, children }) {
 function App() {
   const [activeModal, setActiveModal] = useState(null);
 
+  // Modal open/close handlers
   const openModal = (type) => setActiveModal(type);
   const closeModal = () => setActiveModal(null);
 
+  // Lock scroll when modal is open
   useEffect(() => {
     if (activeModal) {
       document.body.classList.add("modal-open");
@@ -42,20 +48,34 @@ function App() {
     }
   }, [activeModal]);
 
-  // Get user object from localStorage
-  const storedUser = localStorage.getItem("user");
-  const user = storedUser ? JSON.parse(storedUser) : null;
+  // Decrypt user data from localStorage
+  const SECRET_KEY = "my-secret-key";
 
-  // Example role check
-  if (user?.role === 1) {
-    console.log("Admin logged in");
-  } else if (user?.role === 0) {
-    console.log("Normal user logged in");
+  const storedUser = localStorage.getItem("user");
+
+  let user = null;
+  if (storedUser) {
+    try {
+      const bytes = CryptoJS.AES.decrypt(storedUser, SECRET_KEY);
+      const decrypted = bytes.toString(CryptoJS.enc.Utf8);
+      user = JSON.parse(decrypted);
+    } catch (err) {
+      console.error("Failed to decrypt user", err);
+      localStorage.removeItem("user");
+    }
   }
+
+  // Optional: Role check logs (you can remove in prod)
+  useEffect(() => {
+    if (user?.role === 1) {
+      console.log("Admin logged in");
+    } else if (user?.role === 0) {
+      console.log("Normal user logged in");
+    }
+  }, [user]);
 
   return (
     <>
-      {/* <Router> */}
       <Routes>
         {/* Home */}
         <Route
@@ -63,7 +83,7 @@ function App() {
           element={
             <Layout isLoggedIn={!!user}>
               <div className="wrapper-app">
-                <img src={masaiImg} className="wrapper-Img" alt="" />
+                <img src={masaiImg} alt="Masai" className="wrapper-Img" />
                 <div className="wrapper-contents">
                   <h5 className="heroH5">
                     CReDI strengthens the capacity of minority, slum and
@@ -73,10 +93,7 @@ function App() {
                   </h5>
 
                   <div className="buttons">
-                    <h3
-                      className="SigninArrow"
-                      onClick={() => openModal("login")}
-                    >
+                    <h3 className="SigninArrow" onClick={() => openModal("login")}>
                       {/* SignIn &#8594; */}
                     </h3>
 
@@ -84,17 +101,14 @@ function App() {
                       Learn more
                     </Link>
 
-                    <h3
-                      className="SigninArrow-prev"
-                      onClick={() => openModal("register")}
-                    >
+                    <h3 className="SigninArrow-prev" onClick={() => openModal("register")}>
                       {/* &#8592; SignUp */}
                     </h3>
                   </div>
                 </div>
               </div>
 
-              {/* Sections */}
+              {/* Home Page Sections */}
               <Section1 />
               <Section2 />
               <Gallery />
@@ -105,7 +119,7 @@ function App() {
           }
         />
 
-        {/* About */}
+        {/* About Page */}
         <Route
           path="/about"
           element={
@@ -115,31 +129,35 @@ function App() {
           }
         />
 
-        {/* Team */}
+        {/* Team Page */}
         <Route
           path="/team"
           element={
-            <Layout>
+            <Layout isLoggedIn={!!user}>
               <Team />
             </Layout>
           }
         />
-        <Route path="/signin" element={<SignIn />} />
-        {/* Protected Dashboard (Admin only) */}
-        <Route element={<ProtectedRoute requiredRole={1} />}>
-          <Route
-            path="/dashboard"
-            element={
-              <Layout isLoggedIn={!!user}>
-                <Dashboard />
-              </Layout>
-            }
-          />
-        </Route>
-      </Routes>
-      {/* </Router> */}
 
-      {/* Modals */}
+        {/* Sign In and Sign Up routes (no Layout to keep minimal) */}
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<Signup />} />
+
+        {/* Protected Dashboard (Admin Only) */}
+        <Route element={<ProtectedRoute requiredRole={1} />}>
+  <Route
+    path="/dashboard"
+    element={
+      <Layout isLoggedIn={!!user}>
+        <Dashboard />
+      </Layout>
+    }
+  />
+</Route>
+
+      </Routes>
+
+      {/* Modals rendered conditionally */}
       {activeModal === "login" && <SignIn closeModal={closeModal} />}
       {activeModal === "register" && <Signup closeModal={closeModal} />}
     </>

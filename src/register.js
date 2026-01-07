@@ -56,8 +56,8 @@ function Signup({ closeModal }) {
 
   return (
     <>
-      <div className="signup">
-        <div className="login-content">
+      <div className="signup" onClick={closeModal}>
+        <div className="signup-content" onClick={(e) => e.stopPropagation()}>
           <button className="close-modal" onClick={closeModal}>
             CLOSE
           </button>

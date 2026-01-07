@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.css";
 import CredImg from "./images/credilogo.png";
 
-import { Link as RouterLink, useNavigate } from "react-router"; // router link
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import Dropdown from "./dropdown";
 import Dropdown1 from "./dropdown1";
 
@@ -10,9 +10,10 @@ function Navbar({ isLoggedIn }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("user"); // clear saved user
-    navigate("/"); // redirect home
+    localStorage.removeItem("user");
+    navigate("/");
   };
+
   return (
     <div className="navbar">
       <div className="navbar-contents">
@@ -23,22 +24,17 @@ function Navbar({ isLoggedIn }) {
 
         <div className="links">
           <ul>
-            {/* Home goes to actual route (React Router) */}
             <li>
               <RouterLink to="/">Home</RouterLink>
               <Dropdown1 />
             </li>
 
-            {/* Organisation dropdown toggle */}
             <li>
               <RouterLink to="/">Our Organisation</RouterLink>
               <Dropdown />
             </li>
-            {isLoggedIn && (
-              <li onClick={handleLogout}>
-                <RouterLink to="/">Logout</RouterLink>
-              </li>
-            )}
+
+            
           </ul>
         </div>
       </div>

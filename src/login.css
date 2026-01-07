@@ -1,118 +1,140 @@
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgb(54, 35, 35); /* dark semi-transparent background */
-  z-index: 999; /* below the modal content */
-}
-
+/* This covers entire screen with dark transparent background */
 .signin-modal {
   position: fixed;
   inset: 0;
-  background: rgba(41, 17, 17, 0.6); /* your desired dark color */
+  background: rgba(0, 0, 0, 0.6); /* dark transparent */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
+  z-index: 9999; /* on top of everything */
 }
 .signup {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
-  justify-content: center; /* centers horizontally */
-  align-items: center; /* centers vertically */
-  z-index: 1000;
-}
-.signup-form {
-  background-color: #fff;
-  border-radius: 12px;
-  width: 90%; /* fill only the card */
-  padding: 30px;
-  display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
-.close-modal {
-  align-self: flex-end;
-  background: red;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-.close-modal:hover {
-  transform: translateY(-3px);
-}
-.login-content {
-  position: relative;
-  z-index: 1000; /* above overlay */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  padding: 30px;
-
-  width: 100%;
-  max-width: 700px; /* smaller than screen */
-  max-height: 85vh;
-  overflow-y: auto;
-  box-sizing: border-box;
-  flex-direction: column;
-  margin: auto; /* ensure it's centered */
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-
-.signin-form {
+.signup-content {
   background-color: white;
   border-radius: 12px;
   width: 90%;
+  max-width: 400px;
+  max-height: 70vh; /* limit height to 70% of viewport */
   padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.checkbox-group {
-  display: flex;
-  align-items: center; /* aligns text and checkbox vertically */
-  gap: 8px; /* space between checkbox and label */
-  margin-top: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto; /* allow vertical scroll if content too tall */
+  position: relative;
 }
 
-.checkbox-group input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
+/* The actual modal card */
+.login-content {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+
+/* Close button */
+.close-modal {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 12px;
   cursor: pointer;
+  border-radius: 6px;
+  float: right;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.close-modal:hover {
+  background: #c0392b;
+}
+
+/* Form styling */
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signin-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.signin-form input[type="text"],
+.signin-form input[type="password"] {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+justify-content: flex-start;
+  margin-top: 5px;
 }
 
 .btn-submit {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-.btn-submit:hover {
-  transform: translateY(-3px);
-}
-h5 {
-  color: #000;
-  font-size: larger;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
   font-weight: 700;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success & Error messages */
+.success-msg {
+  color: green;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.error-msg {
+  color: red;
+  font-weight: 600;
+  margin-bottom: 10px;
 }

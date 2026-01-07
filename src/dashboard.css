@@ -16,14 +16,33 @@
 ============================== */
 .sidebar-section {
   background-color: rgb(222, 232, 250);
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
+  border-radius: 30px;
   padding: 12px;
   display: flex;
   flex-direction: column;
   transition: width 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  
+}
+
+/* Scrollbar styling */
+.sidebar-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-section::-webkit-scrollbar-thumb {
+  background-color: rgb(136, 170, 233);
+  border-radius: 4px;
+}
+
+.sidebar-section::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(25, 95, 225);
+}
+
+.sidebar-section::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Sidebar width states */
@@ -137,7 +156,10 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+   
 }
+
+
 
 .sidebar-separator {
   align-items: center;

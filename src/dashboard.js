@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CryptoJS from "crypto-js";
 import "./dashboard.css";
 import SearchImg from "./images/Search.jpeg";
 import DonateImg from "./images/donate.jpg";
@@ -30,8 +31,24 @@ function Dashboard() {
   const [selectedDonation, setSelectedDonation] = useState(null);
   const [selectedTeam, setSelectedTeam] = useState(null);
 
-  let stored = window.localStorage.getItem("user");
-  let user = stored ? JSON.parse(stored) : null;
+//  decrypt the user data in the localstorage 
+const encryptedUser = localStorage.getItem("user");
+const SECRET_KEY = "my-secret-key";
+
+
+let user = null;
+
+if (encryptedUser) {
+  try {
+    const bytes = CryptoJS.AES.decrypt(encryptedUser, SECRET_KEY);
+    const decrypted = bytes.toString(CryptoJS.enc.Utf8);
+
+    user = JSON.parse(decrypted);
+  } catch (err) {
+    console.error("Failed to decrypt user", err);
+    localStorage.removeItem("user");
+  }
+}
 
   const handleEditProject = (project) => {
     setSelectedProject(project); // save project being edited
