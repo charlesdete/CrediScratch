@@ -46,7 +46,7 @@ function SignIn({ closeModal }) {
     if (closeModal) closeModal();
 
     navigate("/dashboard", { replace: true });
-
+    setSuccess("User logged in");
   } catch (err) {
     setError("Server error, try again!");
   } finally {
