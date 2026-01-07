@@ -19,7 +19,7 @@
   font-weight: bolder;
   text-decoration-line: overline;
   text-decoration-color: #000;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 800;
   font-size: 24px;
 }
@@ -66,14 +66,14 @@
   border-top-left-radius: 30px;
 }
 .member-name {
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: #000;
 }
 .member-title {
   font-size: 22px;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 800;
   color: #000;
 }
