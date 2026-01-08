@@ -20,7 +20,8 @@
   justify-content: center;
 }
 .section2b {
-  padding: 20px;
+  margin-left:100px ;
+  margin-right: 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -30,11 +31,10 @@
 
  .card2 {
   border: 1px solid rgba(0, 0, 0, 0.125);
-
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  height: 100%;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -42,16 +42,20 @@
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+   
 }
+   
 .card2:hover {
   transform: translateY(-5px);
   cursor: pointer;
 }
 .card2-body {
-  padding: 1rem;
-  flex: 1; /* makes the body stretch */
-  display: flex;
-  flex-direction: column;
+  padding: 5px;
+  
+  display: block;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .card2 img {
@@ -59,6 +63,7 @@
   background-position: center;
   background: transparent;
   background-color: #fff;
+  
 
 }
 .card2-img-top {
@@ -81,22 +86,22 @@
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 16px;
   font-weight: 600;
+  height: 50%;
 }
 
 
 /* For Mobile */
 @media screen and (max-width: 540px) {
+    .section2b {
+    grid-template-columns: 1fr;   /* 🔑 */
+    margin-left: 15px;
+    margin-right: 15px;
+  }
    
-   .section2-contents{
-  
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   }
    
    .card2{
-    height:45vh;
-    flex:1 ;
+    height:auto;
+    width:100%;
      overflow-y: auto;
   overflow-x: hidden;
   min-height: 0;
@@ -118,7 +123,7 @@
   background: transparent;
 }
   .card2-img-top{
-    height:70% ;
+    height:150px ;
   }
 }
 

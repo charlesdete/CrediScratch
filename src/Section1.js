@@ -12,11 +12,11 @@ function Section1() {
         
           <div
             className="card"
-            style={{ backgroundColor: "#0c184b", color: "#fff" }}
+            
           >
             <img src={estImg} className="card-img" alt="" />
 
-            <div className="card-body">
+            <div className="card-body" style={{ backgroundColor: "#0c184b", color: "#fff" }}>
               <h5 className="card-title" style={{ color: "#fff" }}>
                 History
               </h5>
@@ -31,9 +31,9 @@ function Section1() {
       
           <div
             className="card"
-            style={{ backgroundColor: " #e6f0ff", color: "#000" }}
+            
           >
-            <div className="card-body">
+            <div className="card-body" style={{ backgroundColor: " #e6f0ff", color: "#000" }}>
               <h5 className="card-title" style={{ color: "#000" }}>
                 Our Vision
               </h5>
@@ -49,10 +49,10 @@ function Section1() {
         
           <div
             className="card"
-            style={{ backgroundColor: "#0c184b", color: "#fff" }}
+           
           >
             <img src={valueImg} className="card-img" alt="" />
-            <div className="card-body">
+            <div className="card-body"  style={{ backgroundColor: "#0c184b", color: "#fff" }}>
               <h5 className="card-title" style={{  color: "#fff" }}>Core Values</h5>
               <p className="card-text" style={{ paddingLeft: "20px" }}>
                 The Organization’s core values include; equality and equity,
@@ -65,8 +65,8 @@ function Section1() {
         
 
         
-          <div className="card" style={{ backgroundColor: " #e6f0ff",color:"#000" }}>
-            <div className="card-body">
+          <div className="card" >
+            <div className="card-body" style={{ backgroundColor: " #e6f0ff",color:"#000" }}>
               <h5 className="card-title">Our Mission</h5>
               <p className="card-text">
                 We strengthen the capacity of minority, slum and marginalized
